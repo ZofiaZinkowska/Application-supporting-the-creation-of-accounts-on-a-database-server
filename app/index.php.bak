@@ -4,18 +4,22 @@
 <!DOCTYPE html>
 <html lang="pl" >
 <head>
+    <!-- kodowanie znaków, możemy używać polskich znaków -->
     <meta charset="UTF-8" />
+    <!-- tytuł strony -->
     <title> Aplikacja do zakładania kont na serwerze baz danych </title>
+    <!-- importuje czcionkę, którą chce użyć -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Zen+Kaku+Gothic+Antique:wght@300&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="pobrane.png" type="image/x-icon">
-    <link rel="stylesheet" href="index.css" />
+
+    <!-- dodaje plik css.css -->
+    <link rel="stylesheet" href="css.css" />
 </head>
 <body>
     <div id="container">
         <nav>
-            <button><a class="menu" href="index.php">Strona główna</a></button>
-            <button><a class="menu" href="login.php">Login</a></button>
-            <button><a class="menu" href="register.php">Rejestracja</a></button>
+            <a class="menu" href="index.php">Strona główna</a>
+			<a class="menu" href="login.php">Login</a>
+			<a class="menu" href="register.php">Register</a>
         </nav>
         
 	        <article>
@@ -30,6 +34,7 @@ potrzeb w systemie na Wydziale FTiMS.
         <section>
 			<?php
 			include '../projektIO/dump.php';
+
             ?>
 		</section>
         <footer>
