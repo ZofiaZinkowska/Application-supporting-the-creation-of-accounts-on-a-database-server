@@ -20,11 +20,11 @@
         
 	        <article>
 				<h1>Aplikacja do zakładania kont na serwerze baz danych</h1>
-                <p>
-                Projekt ma na celu rozwiązanie problemu przestarzałego oprogramowania systemu wspomagającego zakładanie
-kont na serwerze baz danych. Pomysł na aplikacje powstał podczas rozmowy z dr inż. Bartoszem Reichelem
-oraz brakiem nowoczesnej koncepcji do rozwiązania problemu. Przedsięwzięcie dąży do wypełnienia brakujących
-potrzeb w systemie na Wydziale FTiMS. 
+                <p>Witamy na stronie do zakładania kont na serwerze baz danych!</p>
+				<p>
+				Strona została stworzona w ramach projektu realizowanego na przedmiocie Inżynieria Oprogramowania. 
+				Dzięki temu projektowi zastąpiliśmy przestarzałe oprogramowanie systemu wspomagającego zakładanie kont na serwerze baz danych - nowym. 
+                Przedsięwzięcie dąży do wypełnienia brakujących potrzeb w systemie na Wydziale FTiMS. 
                 </p>
 			</article>
         <section>
