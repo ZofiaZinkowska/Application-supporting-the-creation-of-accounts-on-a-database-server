@@ -2,6 +2,8 @@
 
 	session_start();
 	
+    include __DIR__ .'/model/loginAction.php';
+    include __DIR__ .'/dump.php';
 	// if (!isset($_SESSION['logged']))
 	// {
 	// 	header('Location: login.php');
@@ -22,21 +24,42 @@
 </head>
 <body>
     <div id="container">
-            <nav>
-                <button><a class="menu" href="index.php">Strona główna</a></button>
-                <button><a class="menu" href="login.php">Login</a></button>
-                <button><a class="menu" href="register.php">Rejestracja</a></button>
-            </nav>
+        <nav>
+            <button><a class="menu" href="index.php">Strona główna</a></button>
+            <button><a class="menu" href="register.php">Rejestracja</a></button>
+        </nav>
     </div>
     <div>
-        <form id="login" method="POST" action="">
+        <form id="login" method="POST" action="<?php echo $_SERVER['PHP_SELF'];?>">
             <article>
                 <h2>Zaloguj się</h2>
                 <div class = "inputs">
-                    <input name="email" type="email" placeholder="Podaj email" />
-                    <input name="password" type="password" placeholder="Podaj haslo" />
+                    <input 
+                        name="email" 
+                        type="email" 
+                        placeholder="Podaj email"
+                    />
+                    <input 
+                        name="password" 
+                        type="password"
+                        placeholder="Podaj hasło" 
+                    />
 
-                    <button type="submit">Zaloguj się</button>
+                    <button type="submit">
+                        Zaloguj się
+                    </button>
+                    <?php 
+                        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                            $email = $_POST['email'];
+                            $password = $_POST['password'];
+                            $loginDataForm = new User();
+                            $user = $loginDataForm->authenticate($email, $password);
+                           
+                            if ($user) {
+                                Login::login($user);
+                            }
+                        }
+                    ?>
                 </div>
             </article>
             </div>

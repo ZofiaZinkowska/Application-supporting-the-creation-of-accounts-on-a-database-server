@@ -2,8 +2,8 @@
 
 	session_start();
 	
-    include '../projektIO/model/registerAction.php';
-    include '../projektIO/dump.php';
+    include __DIR__ .'/model/registerAction.php';
+    include __DIR__.'/dump.php';
 	// if (!isset($_SESSION['logged']))
 	// {
 	// 	header('Location: register.php');
@@ -27,7 +27,6 @@
             <nav>
                 <button><a class="menu" href="index.php">Strona główna</a></button>
                 <button><a class="menu" href="login.php">Login</a></button>
-                <button><a class="menu" href="register.php">Rejestracja</a></button>
             </nav>
     </div>
     <div>

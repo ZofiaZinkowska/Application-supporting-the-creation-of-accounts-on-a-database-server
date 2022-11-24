@@ -13,9 +13,18 @@
 <body>
     <div id="container">
         <nav>
-            <button><a class="menu" href="index.php">Strona główna</a></button>
-            <button><a class="menu" href="login.php">Login</a></button>
-            <button><a class="menu" href="register.php">Rejestracja</a></button>
+            <?php 
+                if ($_SESSION['user_id']) { ?>
+            <nav>
+                <button><a class="menu" href="index.php">Strona główna</a></button>
+                <button><a class="menu" href="edit.php">Edycja Profilu</a></button>
+                <button><a class="menu" href="index.php">Wyloguj</a></button>
+            </nav>
+            <?php } else { ?>
+                <button><a class="menu" href="index.php">Strona główna</a></button>
+                <button><a class="menu" href="login.php">Login</a></button>
+                <button><a class="menu" href="register.php">Rejestracja</a></button>
+            <?php } ?>
         </nav>
         
 	        <article>
@@ -29,7 +38,7 @@
 			</article>
         <section>
 			<?php
-			include '../projektIO/dump.php';
+			    include __DIR__ .'/dump.php';
             ?>
 		</section>
         <footer>
