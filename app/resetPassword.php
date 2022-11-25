@@ -20,7 +20,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="login.css" />
     <link rel="shortcut icon" href="pobrane.png" type="image/x-icon">
-   
     <title>Aplikacja do zakładania kont na serwerze baz danych</title>
 </head>
 <body>
@@ -31,36 +30,28 @@
         </nav>
     </div>
     <div>
-        <form id="login" method="POST" action="<?php echo $_SERVER['PHP_SELF'];?>">
+        <form id="reset" method="POST" action="<?php echo $_SERVER['PHP_SELF'];?>">
             <article>
-                <h2>Zaloguj się</h2>
+                <h2>Zresetuj hasło</h2>
                 <div class = "inputs">
                     <input 
-                        name="email" 
-                        type="email" 
-                        placeholder="Podaj email"
+                        name="password1" 
+                        type="password" 
+                        placeholder="Podaj hasło"
                     />
                     <input 
-                        name="password" 
+                        name="password2" 
                         type="password"
-                        placeholder="Podaj hasło" 
+                        placeholder="Powtórz hasło" 
                     />
 
-                    <p><a href="resetPassword.php">Zapomniałeś hasła?</a></p>
-
                     <button type="submit">
-                        Zaloguj się
+                        Zmień hasło
                     </button>
                     <?php 
                         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                            $email = $_POST['email'];
-                            $password = $_POST['password'];
-                            $loginDataForm = new User();
-                            $user = $loginDataForm->authenticate($email, $password);
-                           
-                            if ($user) {
-                                Login::login($user);
-                            }
+                            $password = $_POST['password1'];
+                            $password = $_POST['password2'];
                         }
                     ?>
                 </div>

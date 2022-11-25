@@ -1,0 +1,103 @@
+body {
+    background-color: white;
+}
+
+#container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+nav{
+    background-color: lightgrey;
+}
+button{
+    display: inline-block;
+    width: 24.6%;
+    text-align: center;
+}
+a.menu {
+    color: black;
+    text-decoration: none;
+}
+article {
+    font-size: 16px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+    color: black;
+	text-align: center;
+}
+article h1 {
+    text-align: center;
+    margin: 0 20% 20px 20%;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #2F3954;
+}
+article p {
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+#login {
+margin: 0 20% 20px 20%;
+display : table;
+position : static;
+}
+#login .inputs {
+margin-top : 25px;
+}
+#login .inputs label {
+color : white;
+font-size : 12px;
+font-weight : 300;
+letter-spacing : 1px;
+margin-bottom : 7px;
+display : block;
+}
+input::-webkit-input-placeholder {
+color : #B5B5B5;
+}
+input::-moz-placeholder {
+color : #B5B5B5;
+}
+#login .inputs input[type="email"], input[type="password"] {
+background : #F5F5F5;
+font-size : 0.8rem;
+border-radius : 3px;
+border : none;
+padding : 13px 10px;
+width : 330px;
+margin-bottom : 20px;
+box-shadow : 0 2px 3px rgb(0, 0, 0, 0.1) inset;
+clear : both;
+}
+#login .inputs input[type="email"]:focus, input[type="password"]:focus {
+background : #FFF;
+box-shadow : 0 0 0 3px #FFF38e, 0 2px 3px #FFF38e inset, 0 5px 5px rgb(0, 0, 0, 0.15);
+outline : none;
+}
+#login .inputs label.terms {
+float : left;
+font-size : 14px;
+font-style : italic;
+}
+#login .inputs button[type="submit"] {
+background : #333333;
+width : 100%;
+margin-top : 20px;
+padding : 15px 0;
+color : white;
+font-size : 14px;
+font-weight : bold;
+letter-spacing : 1px;
+text-align : center;
+text-decoration : none;
+border-radius : 5px;
+border : #737b8d solid 1px;
+box-shadow : 0 5px 5px rgb(0, 0, 0, 0.3), 0 1px 0 rgb(255, 255, 255, 0.5) inset;
+text-shadow : 0 1px 3px rgb(0, 0, 0, 0.3), 0 0 0 rgb(255, 255, 255, 0);
+display : table;
+position : static;
+clear : both;
+}

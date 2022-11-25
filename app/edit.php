@@ -12,6 +12,8 @@
     $currentEmail = $editUser->selectEmail();
     dump($currentUsername[0]["username"]);
     dump($currentEmail[0]["email"]);
+
+    //    <link rel="stylesheet" href="index.css" />
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +23,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="pobrane.png" type="image/x-icon">
-    <link rel="stylesheet" href="index.css" />
+
     <title>Aplikacja do zakładania kont na serwerze baz danych</title>
 </head>
 <body>
