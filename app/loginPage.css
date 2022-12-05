@@ -48,13 +48,13 @@ article h2 {
     border-bottom: 2px solid #2F3954;
 }
 
-#register {
+#login {
     max-width: 80%;
     margin: 0 auto;
     background-color: lightgray;
 }
 
-#register .inputs {
+#login .inputs {
     margin-top: 25px;
 }
 
@@ -65,9 +65,7 @@ input::-webkit-input-placeholder {
 input::-moz-placeholder {
     color : #B5B5B5;
 }
-
-#register .inputs input[type="text"], input[type="email"], input[type="password"] {
-    margin-left: 23.5%;
+#login .inputs input[type="email"], input[type="password"] {
     background : #F5F5F5;
     font-size : 0.8rem;
     border-radius : 3px;
@@ -79,13 +77,13 @@ input::-moz-placeholder {
     clear : both;
 }
 
-#register .inputs input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+#login .inputs input[type="email"]:focus, input[type="password"]:focus {
     background : #FFF;
     box-shadow : 0 0 0 3px #FFF38e, 0 2px 3px #FFF38e inset, 0 5px 5px rgb(0, 0, 0, 0.15);
     outline : none;
 }
 
-#register .inputs button[type="submit"] {
+#login .inputs button[type="submit"] {
     margin-left: 40%;
     background : #333333;
     width : 20%;

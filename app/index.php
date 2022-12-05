@@ -7,7 +7,7 @@
     <meta charset="UTF-8" />
     <title> Aplikacja do zakładania kont na serwerze baz danych </title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Zen+Kaku+Gothic+Antique:wght@300&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="pobrane.png" type="image/x-icon">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
     <link rel="stylesheet" href="index.css" />
 </head>
 <body>
