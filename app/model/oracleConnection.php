@@ -1,6 +1,6 @@
 <?php
 //$con=oci_connect('username', 'password', 'localhost/orcl');
-$conn = oci_connect('hr', 'hr', 'localhost/XEPDB1');
+$conn = oci_connect('projektio', 'projektio', 'localhost/XEPDB1');
 if($conn) {
     echo "Connection succeded";
 }
