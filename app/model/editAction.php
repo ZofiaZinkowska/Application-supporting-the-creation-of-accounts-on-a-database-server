@@ -154,12 +154,11 @@ class EditAction {
 
         if ($reset->editPassword($oldPassword, $newPassword, $newRepeatedPassoword)) {
 
-            dump('haslo zmienione');
-
+            echo 'Hasło zostało zmienione';
 
         } else {
 
-            dump('Nie udalo sie zmienic hasla');
+            echo 'Nie udalo sie zmienic hasla';
 
         }
     }

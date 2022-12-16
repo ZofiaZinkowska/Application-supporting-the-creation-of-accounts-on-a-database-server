@@ -1,19 +1,17 @@
 <?php
 
 	session_start();
-	
     include __DIR__ .'/dump.php';
 	include __DIR__.'/model/editAction.php';
-    
-    dump($_SESSION['user_id']);
+
+    if (!$_SESSION['user_id']) {
+        header('Location: http://localhost/projektio/app/index.php');
+    }
 
     $editUser = new EditModel();
     $currentUsername = $editUser->selectUsername();
     $currentEmail = $editUser->selectEmail();
-    dump($currentUsername[0]["username"]);
-    dump($currentEmail[0]["email"]);
 
-    //    <link rel="stylesheet" href="index.css" />
 ?>
 
 <!DOCTYPE html>
@@ -23,19 +21,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="pobrane.png" type="image/x-icon">
-
+    <link rel="stylesheet" href="loginPage.css" />
     <title>Aplikacja do zakładania kont na serwerze baz danych</title>
 </head>
 <body>
     <div id="container">
         <nav>
             <button><a class="menu" href="index.php">Strona główna</a></button>
-            <button><a class="menu" href="register.php">Rejestracja</a></button>
+            <button><a class="menu" href="addUser.php">Dodaj Użytkownika</a></button>
+            <button><a class="menu" href="edit.php">Edycja Profilu</a></button>
+            <button><a class="menu" href="upload.php">PDF</a></button>
+            <button><a class="menu" href="logout.php">Wyloguj</a></button>
         </nav>
+        <section>
+		</section>
+        <footer>
+        </footer>
     </div>
     <div>
         <form id="login" method="POST" action="<?php echo $_SERVER['PHP_SELF'];?>">
             <article>
+            <div class = "inputs">
                 <input 
                     name="username" 
                     type="textarea"
@@ -63,6 +69,7 @@
                     type="password"
                     placeholder="Podaj ponownie nowe hasło"
                 />
+            </div>
                 <button type="submit">Edytuj</button>
                 <?php 
                     if ($_SERVER["REQUEST_METHOD"] == "POST") {

@@ -66,7 +66,7 @@ input::-moz-placeholder {
     color : #B5B5B5;
 }
 
-#register .inputs input[type="text"], input[type="email"], input[type="password"] {
+#register .inputs input[type="text"], input[type="email"], input[type="password"]{
     margin-left: 23.5%;
     background : #F5F5F5;
     font-size : 0.8rem;
@@ -79,7 +79,7 @@ input::-moz-placeholder {
     clear : both;
 }
 
-#register .inputs input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+#register .inputs input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus{
     background : #FFF;
     box-shadow : 0 0 0 3px #FFF38e, 0 2px 3px #FFF38e inset, 0 5px 5px rgb(0, 0, 0, 0.15);
     outline : none;

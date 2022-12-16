@@ -1,5 +1,12 @@
 <?php
-	session_start();
+    session_start();
+    include __DIR__ .'/dump.php';   
+    include __DIR__ .'/model/loginAction.php';
+
+    if (!$_SESSION) {
+        $_SESSION['user_id'] = null;
+    }
+
 ?>
 <!DOCTYPE html>
 <html lang="pl" >
@@ -7,7 +14,7 @@
     <meta charset="UTF-8" />
     <title> Aplikacja do zakładania kont na serwerze baz danych </title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Zen+Kaku+Gothic+Antique:wght@300&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="pobrane.png" type="image/x-icon">
     <link rel="stylesheet" href="index.css" />
 </head>
 <body>
@@ -17,8 +24,10 @@
                 if ($_SESSION['user_id']) { ?>
             <nav>
                 <button><a class="menu" href="index.php">Strona główna</a></button>
+                <button><a class="menu" href="addUser.php">Dodaj Użytkownika</a></button>
                 <button><a class="menu" href="edit.php">Edycja Profilu</a></button>
-                <button><a class="menu" href="index.php">Wyloguj</a></button>
+                <button><a class="menu" href="upload.php">PDF</a></button>
+                <button><a class="menu" href="logout.php">Wyloguj</a></button>
             </nav>
             <?php } else { ?>
                 <button><a class="menu" href="index.php">Strona główna</a></button>
@@ -37,9 +46,6 @@
                 </p>
 			</article>
         <section>
-			<?php
-			    include __DIR__ .'/dump.php';
-            ?>
 		</section>
         <footer>
         </footer>

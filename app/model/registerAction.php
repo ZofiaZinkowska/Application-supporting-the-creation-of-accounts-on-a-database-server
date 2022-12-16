@@ -16,20 +16,15 @@
             // $this->validate();
             if (empty($this->errors)) {
                 $password_hash = password_hash($this->userPassword, PASSWORD_DEFAULT);
-                dump($password_hash);
                 $db = Model::getDB();
-                dump($db);
 
                 $sql_insert_user = 'INSERT INTO users VALUES (null, :username, :password, :email)';
 
-                dump($this->name);
                 $stmt_user = $db->prepare($sql_insert_user);
     
                 $stmt_user->bindValue(":username", $this->name, PDO::PARAM_STR);
                 $stmt_user->bindValue(":password", $password_hash, PDO::PARAM_STR);
                 $stmt_user->bindValue(":email", $this->email, PDO::PARAM_STR);
-                dump($this->email);
-                dump($stmt_user);
                 $stmt_user->execute();
             }
     

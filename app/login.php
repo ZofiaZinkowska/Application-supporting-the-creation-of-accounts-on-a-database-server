@@ -4,12 +4,6 @@
 	
     include __DIR__ .'/model/loginAction.php';
     include __DIR__ .'/dump.php';
-	// if (!isset($_SESSION['logged']))
-	// {
-	// 	header('Location: login.php');
-	// 	exit();
-	// }
-
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="loginPage.css" />
-    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="pobrane.png" type="image/x-icon">
    
     <title>Aplikacja do zakładania kont na serwerze baz danych</title>
 </head>
@@ -59,7 +53,8 @@
                             $user = $loginDataForm->authenticate($email, $password);
                            
                             if ($user) {
-                                Login::login($user);
+                                Login::loginAction();
+                                header('Location: http://localhost/projektio/app/index.php');
                             }
                         }
                     ?>
